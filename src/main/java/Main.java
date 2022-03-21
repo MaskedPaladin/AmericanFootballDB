@@ -150,7 +150,8 @@ public class Main {
         playerController.listPlayers();
         teamController.listTeams();
         matchController.listMatches();
-
+      case 3:
+        playerController.deleteAllEntries();
       default:
         System.out.println("Adeu!!");
         System.exit(1);

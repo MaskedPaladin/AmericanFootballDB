@@ -41,4 +41,11 @@ public class PlayerController {
         em.getTransaction().commit();
         em.close();
     }
+    public void deleteAllEntries(){
+        EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        em.createQuery("delete from player");
+        em.getTransaction().commit();
+        em.close();
+    }
 }

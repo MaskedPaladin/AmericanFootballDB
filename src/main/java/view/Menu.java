@@ -20,7 +20,7 @@ public class Menu {
 
             System.out.println("1. Carrega dades. ");
             System.out.println("2. Consulta dades. ");
-
+            System.out.println("3. Elimina les entrades de la taula player. ");
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");
@@ -30,7 +30,7 @@ public class Menu {
                 System.out.println("valor no vàlid");
                 e.printStackTrace();
             }
-        } while (option < 0  || option > 2);
+        } while (option < 0  || option > 3);
 
         return option;
     }
