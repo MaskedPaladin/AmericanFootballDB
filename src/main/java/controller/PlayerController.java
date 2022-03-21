@@ -33,7 +33,7 @@ public class PlayerController {
     }
     public void addPlayer() throws ParseException {
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Name, surname1, surname2, birthdate, active");
         Player player = new Player(sc.next(), sc.next(), sc.next(), new SimpleDateFormat("dd/mm/yyyy").parse(sc.next()), sc.nextBoolean());
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
@@ -44,7 +44,7 @@ public class PlayerController {
     public void deleteAllEntries(){
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
-        em.createQuery("delete from player");
+        em.createQuery("delete from player").executeUpdate();
         em.getTransaction().commit();
         em.close();
     }
