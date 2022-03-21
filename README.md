@@ -4,5 +4,5 @@
 - Documentation
 - Show player stats from specific match
 - Show seasons
-- Delete all entries from tables
+- Delete all entries from tables match and teams
 - Update entries from tables
