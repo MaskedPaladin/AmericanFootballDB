@@ -3,7 +3,7 @@
 - Added function that deletes all rows from player table
 # TODO
 - Documentation
-- Show player stats from specific match
+- Show relationed data using ids
 - Show seasons
 - Delete all entries from tables match and teams
 - Update entries from tables
