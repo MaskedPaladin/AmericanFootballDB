@@ -18,9 +18,10 @@ public class Menu {
 
             System.out.println(" \nMENU PRINCIPAL \n");
 
-            System.out.println("1. Carrega dades. ");
-            System.out.println("2. Consulta dades. ");
-            System.out.println("3. Elimina les entrades de la taula player. ");
+            System.out.println("1. Insereix jugador. ");
+            System.out.println("2. Insereix equip. ");
+            System.out.println("3. Consulta dades. ");
+            System.out.println("4. Elimina les entrades de la taula player. ");
             System.out.println("0. Sortir. ");
 
             System.out.println("Esculli opció: ");
@@ -30,7 +31,7 @@ public class Menu {
                 System.out.println("valor no vàlid");
                 e.printStackTrace();
             }
-        } while (option < 0  || option > 3);
+        } while (option < 0  || option > 4);
 
         return option;
     }
