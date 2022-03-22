@@ -32,14 +32,20 @@ public class PlayerController {
         em.close();
     }
     public void addPlayer() throws ParseException {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Name, surname1, surname2, birthdate, active");
-        Player player = new Player(sc.next(), sc.next(), sc.next(), new SimpleDateFormat("dd/mm/yyyy").parse(sc.next()), sc.nextBoolean());
-        EntityManager em = entityManagerFactory.createEntityManager();
-        em.getTransaction().begin();
-        em.merge(player);
-        em.getTransaction().commit();
-        em.close();
+        try{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Name\nsurname1\nsurname2\nbirthdate\nactive");
+            Player player = new Player(sc.next(), sc.next(), sc.next(), new SimpleDateFormat("dd/mm/yyyy").parse(sc.next()), sc.nextBoolean());
+            EntityManager em = entityManagerFactory.createEntityManager();
+            em.getTransaction().begin();
+            em.merge(player);
+            em.getTransaction().commit();
+            em.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            addPlayer();
+        }
     }
     public void deleteAllEntries(){
         EntityManager em = entityManagerFactory.createEntityManager();
