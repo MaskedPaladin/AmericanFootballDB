@@ -146,11 +146,17 @@ public class Main {
           e.printStackTrace();
         }
       case 2:
-        // Read from database
+        try {
+          teamController.addTeam();
+        }
+        catch(Exception e){
+          e.printStackTrace();
+        }
+      case 3:
         playerController.listPlayers();
         teamController.listTeams();
         matchController.listMatches();
-      case 3:
+      case 4:
         playerController.deleteAllEntries();
       default:
         System.out.println("Adeu!!");
